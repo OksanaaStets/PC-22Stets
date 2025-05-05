@@ -1,0 +1,1326 @@
+
+* {padding: 0; margin: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@font-face {
+    font-family: 'KyivType Titling';
+    src: url('KyivType-VariableGX/KyivTypeTitling-VarGX.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+header {
+	height: 100px;
+	display: flex; /* Встановлює flex-контейнер */
+    justify-content: space-between; /* Розташовує елементи по краях */
+    align-items: center;
+	padding: 0 80px;
+	background-color: #dbdbdb;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+.hamburger-menu{
+	display: none;
+}
+nav a {
+	font-family: "Jura";
+	font-weight: 400;
+	font-size: 22px;
+	text-decoration: none;
+	color: #060606;
+}
+.logo {
+	width: 120px;
+}
+h1{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+    color: #FFFFFF;
+	font-size: 64px;
+	padding: 0 80px;
+	padding-top: 470px;
+	margin: 26px;
+}
+h2{
+	font-family: "Jura";
+	font-weight: 400;
+  	font-optical-sizing: auto;
+    color: #060606;
+	margin: 100px 0 60px;
+	font-size: 60px;
+
+}
+.no-hide{
+		display: none;
+	}
+.Schmalgauzen{
+	height: 867px;
+	background-image: url("images/Group_phtoto.png");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+}
+.main_sentence{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+    color: #B5A391;
+	font-size: 24px;
+	padding: 0 80px 0 108px;
+	padding-bottom: 207px;
+}
+.about-us{
+	background-color: #D9D9D9;
+	display: flex;
+	flex-direction: column;
+	padding: 0 80px;
+}
+.columns-three-guys, .columns-second-three-guys{
+	display: flex;
+	gap: 54px;
+	justify-content: space-between;
+	/* flex-wrap: wrap; */
+	
+}
+.columns-three-guys img, .columns-second-three-guys img{
+	max-width: 100%;
+}
+.columns-three-guys h3, .columns-second-three-guys h3{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	padding-top: 24px;
+	color: #715F4C;
+	font-size: 24px;
+}
+.columns-three-guys p{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	padding-bottom: 60px;
+	font-size: 18px;
+}
+.columns-second-three-guys p{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	padding-bottom: 100px;
+	font-size: 18px;
+}
+
+.Performances {
+    position: relative;
+    background-color: #060606;
+    width: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.Performances::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 84%;
+    background-image: url("images/CD.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+	opacity: 0.4;
+	z-index: -1;
+}
+.Performances h2{
+	font-family: "Jura";
+	font-weight: 400;
+	color: #DBDBDB;
+	font-size: 60px;
+	margin: 100px 80px 60px;
+}
+.perfomance-photos{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	gap: 54px;
+	padding: 0 80px;
+}
+.perfomance-photos img{
+	max-width: 280px;
+}
+.perfomance-photos h3{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #D9D9D9;
+	font-size: 24px;
+	padding: 24px 0 16px 0;
+}
+.perfomance-photos p{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #D9D9D9;
+	padding-bottom: 100px;
+	font-size: 20px;
+}
+.merch, .popular-songs{
+	background-color: #D9D9D9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 80px;
+}
+.merch h2, .popular-songs h2{
+	font-family: "Jura";
+	font-weight: 400;
+	color: #060606;
+	font-size: 60px;
+	margin: 100px 0 60px;
+}
+.rectangle{
+	width: 260px;
+	height: 260px;
+    padding: 50px; 
+    background-color: #B5A391; 
+    border-radius: 56px; /* Заокруглені кути */
+    text-align: center; 
+	margin: 0;
+	margin-bottom: 58px;
+}
+.merch-container {
+    display: flex;
+    justify-content: center;
+	gap: 40px;
+	align-items: center;
+	flex-direction: row;
+}
+.merch-element{
+	display: flex;
+	gap: 40px;
+	flex-direction: row;
+}
+.stikers img{
+	width: 175px;
+	height: auto;
+}
+.merch-container img{
+	min-width: 90px;
+	max-width: 230px;
+    max-height:240px; 
+}
+.merch-container h3{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #060606;
+	font-size: 24px;
+	padding: 15px 0 30px;
+}
+.next{
+	display: none;
+}
+.tickets{
+	position: relative;
+	background-color: #060606;
+	min-height: 900px;
+	overflow: hidden; 
+}
+.tickets h2{
+	color: #DBDBDB;
+    font-size: 60px;
+    padding: 100px 80px 60px;
+	margin: 0%;
+}
+.tickets-container {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+	padding-left: 80px;
+    flex-wrap: wrap; 
+}
+.tickets-element{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.tickets-photo{
+	position: absolute;
+	top: 10%;
+	width: 230px;
+	height: auto;
+	border-radius: 10%;
+	filter: blur(5px);
+	z-index: 2;
+}
+.tickets-container p{
+	font-family: "Jura";
+	padding-top: 11px;
+}
+/* Стилі для дати (зліва) */
+.tickets-element p:nth-of-type(1) {
+    position: absolute;
+    left: 17%;
+    top: 46%;
+    font-size: 16px;
+    color: #050505;
+    text-align: left;
+}
+/* Стилі для часу (справа) */
+.tickets-element p:nth-of-type(2) {
+    position: absolute;
+    right: 17%;
+    top: 46%;
+    font-size: 16px;
+    color: #050505;
+    text-align: right;
+}
+
+.tickets-photo-main{
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	/* z-index: 1; */
+}
+.main-tickets{
+	position: absolute;
+	top: 23%;
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #D9D9D9;
+	font-size: 34px;
+	z-index: 3;
+}
+.tickets-p, .tickets-price{
+	position: absolute;
+	top: 55%;
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #050505;
+	font-size: 24px;
+}
+.tickets-price{
+	top: 64%;
+}
+.buy-btn{
+	position: absolute;
+	top: 75%;
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #050505;
+	font-size: 24px;
+	background-color: #B5A391;
+	border: none;
+	border-radius: 15px;
+	padding: 10px 20px;
+	cursor: pointer;
+	/* text-decoration: none; */
+}
+.tickets-video{
+	overflow: clip;
+	width: 24%;
+	height: 500px;
+	position: absolute;
+	right: 5%;
+	transform: translateY(-50%); /* Центруємо вертикально */
+    object-fit: cover;
+	top: 50%;
+}
+.popular-songs {
+	display: flex;
+    position: relative; /* Щоб внутрішні absolute-елементи орієнтувалися на цей блок */
+    overflow: hidden; /* Приховує все, що виходить за межі */
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 80px;
+	z-index: 1;
+}
+.Vinyl {
+    position: absolute; 
+    left: -250px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg); 
+    width: 715px;
+    height: 715px;
+    border-radius: 50%;
+    animation: spin 5s linear infinite; /* Анімація обертання */
+	z-index: -1;
+}
+.photo-music{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 40px;
+}
+.column-music, .column-music-two .column-music-three{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+}
+.column-music img, .column-music-two img, .column-music-three img{
+	width: 265px;
+	height:265px;
+}
+.column-music p, .column-music-two p, .column-music-three p{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #715F4C;
+	font-size: 20px;
+	text-align: left;
+	padding: 20px 0;
+}
+.music-hidden{
+	width: 265px;
+    height: 265px; 
+    visibility: hidden;
+	padding: 20px 0 30px
+}
+.margin{
+	margin: 0 0 100px;
+}
+/* Анімація обертання вінілу */
+@keyframes spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+.contact-button-container {
+	text-align: start;
+  }
+  
+  .contact-button {
+	background-color: transparent;
+	color: #B5A391;
+	border: 2px solid #B5A391;
+	padding: 10px 25px;
+	font-family: 'Jura', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 4px;
+	text-decoration: none;
+	display: inline-block;
+  }
+  
+  .contact-button:hover {
+	background-color: #B5A391;
+	color: #060606;
+  }
+  
+  /* Стилі для модального вікна */
+  .modal {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  /* Використовуємо :target для відображення модального вікна */
+  .modal:target {
+	opacity: 1;
+	visibility: visible;
+  }
+  
+  .modal-content {
+	position: relative;
+	background-color: #121212;
+	margin: 10% auto;
+	padding: 30px;
+	width: 80%;
+	max-width: 600px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	transform: translateY(-20px);
+	transition: transform 0.3s;
+  }
+  
+  .modal:target .modal-content {
+	transform: translateY(0);
+  }
+  
+  .close-button {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	color: #B5A391;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: color 0.3s;
+	text-decoration: none;
+  }
+  
+  .close-button:hover, .close-button:focus {
+	color: #B5A391;
+	text-decoration: none;
+  }
+  
+  .modal h2 {
+	text-align: center;
+	margin-bottom: 30px;
+	font-family: 'Jura', sans-serif;
+	font-weight: 700;
+	color: #DBDBDB;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  }
+  
+  /* Стилі для форми в модальному вікні */
+  .modal .form-group {
+	border: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .modal .input-field {
+	width: 100%;
+	padding: 12px 15px;
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.05);
+	border: none;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 4px;
+	font-family: 'Jura', sans-serif;
+	font-size: 1rem;
+	color: #DBDBDB;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+  }
+  
+  .modal .input-field:focus {
+	outline: none;
+	border-bottom-color: #fff;
+	background: rgba(255, 255, 255, 0.1);
+  }
+	.modal .poll-option {
+	padding: 12px 15px;
+	color: rgba(255, 255, 255, 0.5);
+	}
+  .modal .input-field::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .modal .textarea-field {
+	height: 150px;
+	resize: vertical;
+  }
+  
+  .modal label {
+	display: block;
+	margin-bottom: 8px;
+	font-family: 'Jura', sans-serif;
+	font-weight: 600;
+	font-size: 1rem;
+	color: #B5A391;
+  }
+  
+  .modal .submit-container {
+	text-align: right;
+	margin-top: 20px;
+  }
+
+  .modal .submit-btn {
+	background-color: transparent;
+	color: #DBDBDB;
+	border: 2px solid #715F4C;
+	padding: 10px 30px;
+	font-family: 'Jura', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 4px;
+  }
+  
+  .modal .submit-btn:hover {
+	background-color: #715F4C;
+	color: #000;
+  }
+
+video{
+	/* overflow-clip-margin: content-box; */
+	overflow: clip;
+	width: 637px;
+	height: 581px;
+	object-fit: cover;
+	position: absolute;
+	right: 0%;
+}
+footer{
+	background-color: #050505;
+	padding: 0 80px 0px 80px;
+	height: 581px;
+	display: flex;
+	flex-direction: column;
+	background-size: 715px 100%;
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+footer a, footer p{
+	font-family: "KyivType Titling";
+	font-weight: 400;
+	color: #B5A391;
+	/* font-size: 18px; */
+	text-decoration: none;
+}
+footer h2{
+	font-family: "Jura";
+	font-weight: 400;
+	color: #DBDBDB;
+	font-size: 60px;
+	margin:0px 0 60px;
+	padding: 100px 0 0 0;
+}
+.footer-content{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: #B5A391;
+	text-decoration: none;
+	gap: 40px;
+}
+.footer-links{
+	display: flex;
+	flex-direction: row;
+	gap: 90px;
+}
+.music-links, .social-links, .adress{
+	display: flex;
+	flex-direction: column;
+}
+@media (max-width: 1600px){
+	.tickets-photo-main{
+		height: 455px;
+		justify-content: center;
+		align-items: center;
+	}
+	.tickets-container {
+		gap: 30px;
+	}
+	.tickets-video{
+		width: 16%;
+		height: 500px;
+	}
+	.tickets-photo {
+		position: absolute;
+		top: 10%;
+		width: 210px;
+		height: auto;
+	}
+}
+@media (max-width: 1300px) {
+	video{
+		display: none;
+	}
+	.merch-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.rectangle img{
+		min-width: 160px;
+		max-width: 230px;
+		height: auto; 
+	}
+	.merch-container h3{
+		font-size: 20px;
+		padding: 10px 0 20px;
+	}
+	.rectangle{
+		max-width: 230px;
+		max-height: 230px;
+		padding: 60px; 
+	}
+	.tickets {
+		position: relative;
+		min-height: 700px;
+		padding-bottom: 100px;
+		z-index: 0;
+	}
+	
+	.tickets-video {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.5;
+		z-index: -1;
+	}
+	.tickets-photo-main{
+		height: 455px;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	.tickets-container {
+		flex-direction: row; 
+		justify-content:center;
+		padding: 0;
+		gap: 20px; 
+		z-index: 1;
+	}
+	.tickets-photo {
+		position: absolute;
+		top: 10%;
+		width: 210px;
+		height: auto;
+	}
+	footer{
+		position: relative;
+		background-color: #060606;
+		padding: 100px 80px 0px 80px;
+		height: 581px;
+		z-index: 1;
+		display: flex;
+		background-image: none;
+		padding: 0 30px;
+	
+	}
+	footer::before{
+		content: "";
+		position: absolute;
+		top: 0;  /* Прикріплює до верху */
+    	left: 0;
+    	width: 100%;
+    	height: 100%; /* Висота фонового зображення */
+
+    	background-image: url("images/Group2.jpg");
+    	background-size: cover; /* Чітке масштабування */
+    	background-position: top center;
+    	background-repeat: no-repeat;
+		opacity: 0.4;
+		z-index: -1;
+
+	}
+}
+@media (max-width: 1040px) {
+	.Vinyl{
+		width: 600px;
+		height: 600px;
+	}
+	.photo-music {
+		height: auto;
+	}
+	.column-music, .column-music-two, .column-music-three {
+		display: flex;
+		height: auto;
+	}
+	.column-music-two{
+		gap: 30px;
+	}
+	.music, .music-two, .music-three {
+		height: auto; 
+	}
+	.music-hidden {
+		display: none;
+		height: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.photo-music img {
+		max-width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+	
+	/* Для обмеження висоти конкретних блоків при необхідності */
+	.music, .music-two, .music-three {
+		max-height: fit-content;
+	}
+}
+@media(max-width: 973px){
+	.Vinyl{
+		width: 500px;
+		height: 500px;
+	}
+	.tickets-photo-main{
+		height: 430px;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	.tickets-container {
+		flex-direction: row; 
+		justify-content:center;
+		padding: 0;
+		gap: 20px; 
+		z-index: 1;
+	}
+	.tickets-photo {
+		position: absolute;
+		top: 10%;
+		width: 190px;
+		height: auto;
+	}
+}
+@media (max-width: 880px) {
+	header {
+		position: relative;
+		display: flex;
+	  }
+	.logo {
+		position: absolute;
+		top: 0;
+		left: 5%;
+	  }
+	nav{
+		display: none;
+	}
+	.hamburger-menu{
+		display: block;
+	}
+	#menu__toggle {
+		opacity: 0;
+	  }
+	  
+	  #menu__toggle:checked ~ .menu__btn > span {
+		transform: rotate(45deg);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::before {
+		top: 0;
+		transform: rotate(0);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	  }
+	  #menu__toggle:checked ~ .menu__box {
+		visibility: visible;
+		right: 0;
+	  }
+	  /* Add this to make the menu button fixed when menu is open */
+	  #menu__toggle:checked ~ .menu__btn {
+		position: fixed;
+		top: 20px;
+		right: 5%;
+	  }
+
+	  .menu__btn {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 20px;
+		right: 5%;
+	  
+		width: 34px;
+		height: 64px;
+	  
+		cursor: pointer;
+		z-index: 3;
+	  }
+	  
+	  .menu__btn > span,
+	  .menu__btn > span::before,
+	  .menu__btn > span::after {
+		display: block;
+		position: absolute;
+	  
+		width: 100%;
+		height: 3px;
+		border-radius: 2px;
+	  
+		background-color: #715F4C;
+	  
+		transition-duration: .25s;
+	  }
+	  .menu__btn > span::before {
+		content: '';
+		top: -8px;
+	  }
+	  .menu__btn > span::after {
+		content: '';
+		top: 8px;
+	  }
+	  
+	  .menu__box {
+		display: block;
+		position: fixed;
+		visibility: hidden;
+		top: 0;
+		right: -100%;
+	  
+		width: 300px;
+		height: 18%;
+	  
+		margin: 0;
+		padding: 80px 0;
+	  
+		list-style: none;
+	  
+		background-color: #DBDBDB;
+		   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+	  
+		transition-duration: .25s;
+		z-index: 2;
+	  }
+	  
+	  .menu__item {
+		display: block;
+		padding: 12px 24px;
+	  
+		color: #000000;
+	  
+		font-family: "Jura";
+		font-size: 20px;
+		font-weight: 600;
+	  
+		text-decoration: none;
+	  
+		transition-duration: .25s;
+	  }
+	  .menu__item:hover {
+		background-color: #DBDBDB;
+	  }
+
+	.merch-element{
+		display: flex;
+		gap: 40px;
+		flex-direction: row;
+	}
+	.rectangle img{
+		min-width: 120px;
+		max-width: 180px;
+		height: auto; 
+	}
+	.stikers img{
+		width: 135px;
+		height: auto;
+	}
+	.merch-container h3{
+		font-size: 18px;
+		padding: 10px 0 15px;
+	}
+	.rectangle{
+		max-width: 200px;
+		max-height: 200px;
+		padding: 60px; 
+		background-color: #B5A391; 
+		border-radius: 40px; /* Заокруглені кути */
+		text-align: center; 
+		margin: 0;
+		margin-bottom: 30px;
+	}
+}
+@media(max-width: 837px){
+	.Vinyl{
+		width: 500px;
+		height: 500px;
+		left: -300px;
+	}
+}
+@media (max-width: 800px) {
+	header{
+		padding: 0 30px;
+	}
+	h1{
+		margin: 0%;
+		font-size: 26px;
+		padding: 0 30px;
+	}
+	.main_sentence{
+		font-size: 12px;
+		padding: 0 30px;
+		padding-bottom: 145px;
+	}
+	.no-hide{
+		display: block;
+	}
+	.Schmalgauzen{
+		height: 400px;
+		background-size: cover;
+		align-items: flex-end;
+		padding: 0 30px 0 30px;
+	}
+	h2{
+		font-size: 24px;
+		padding: 40px 30px 21px 0;
+		margin: 0%;
+	}
+	.about-us{
+		padding: 0 30px;
+		padding-bottom: 20px;
+	}
+	.columns-three-guys, .columns-second-three-guys{
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+	}
+	.columns-three-guys img, .columns-second-three-guys img{
+		width: 100%;
+		max-width: 260px;
+		height: 400px;
+	}
+	.about-us h3{
+		font-size: 14px;
+		padding-top: 10px;
+	}
+	.about-us p{
+		font-size: 12px;
+		padding-bottom: 20px;
+	}
+	.Performances {
+		/* padding: 0 30px; */
+		height: auto;
+        min-height: 1029px;
+		overflow: hidden;
+		z-index: 1;
+		padding-bottom: 10px;
+    }
+	.Performances::before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: 180% 28%;
+		background-repeat: repeat-y;
+		z-index: -1;
+	}  	
+	.perfomance-photos{
+	padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+	height: auto;
+	}
+	.perfomance-photos img{
+		width: 100%;
+		max-width: 200px;
+	}
+	.Performances h2{
+		margin: 0%;
+		padding: 40px 123px 30px 123px;
+		font-size: 24px;
+		text-align: center;
+	}	
+	.perfomance-photos h3{
+		font-size: 12px;
+		text-align: center;
+		padding: 10px 0;
+	}
+	.perfomance-photos p{
+		font-size: 11px;
+		text-align: center;
+		padding: 0 0 30px 0;
+	}
+	.merch, .popular-songs{
+		padding: 0 30px;
+		}
+	.merch h2{
+		font-size: 24px;
+		padding: 40px 0 30px 0;
+		margin: 0%;
+	}
+	.merch-container .merch-element-none {
+        display: none;
+    }
+	.merch-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.merch-element {
+		display: block;
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
+	.rectangle img{
+		min-width: 66px;
+		max-width: 130px;
+		max-height: 140px; 
+	}
+	.rectangle h3{
+		align-items: center;
+		font-size: 12px;
+		padding: 0 0 20px 0;
+	}
+	.rectangle{
+		max-height: 122px;
+		max-width: 122px;;
+		border-radius: 32px; /* Заокруглені кути */
+	}
+	.next{
+		display: block;
+  		margin: 0 auto; /* по центру + відступ зверху */
+		width: 70px;
+		height: auto;
+		padding-bottom: 30px;
+	}
+	.tickets{
+		padding: 0 30px;
+		min-height: 500px;
+	}
+	.tickets-photo-main{
+		height: 330px;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	.tickets-container {
+		flex-direction: row; 
+		justify-content:center;
+		padding: 0;
+		gap: 20px; 
+		z-index: 1;
+		padding-bottom: 30px;
+	}
+	.tickets-photo {
+		position: absolute;
+		top: 10%;
+		width: 150px;
+		height: auto;
+	}
+	.tickets h2 {
+		font-size: 24px;
+		padding: 40px 0 30px 0;
+		margin: 0%;
+	}
+	.main-tickets {
+		font-size: 19px;
+	}
+	.tickets-p, .tickets-price{
+		font-size: 18px;
+		top: 57%;
+	}
+	.tickets-price{
+		top: 66%;
+	}
+	.buy-btn {
+		font-size: 12px;
+		border-radius: 10px;
+   	 	padding: 6px 15px;
+		top: 77%;
+	}
+	.tickets-element p:nth-of-type(1), .tickets-element p:nth-of-type(2){
+		font-size: 12px;
+	}
+	.photo-music {
+        display: flex;
+		flex-wrap: wrap;
+        gap: 20px;
+        justify-items: center;
+		justify-content: space-around;
+		min-height: 300px;
+    }
+	.popular-songs h2{
+		font-size: 24px;
+		padding: 40px 0 30px 0;
+		margin: 0%;
+	}
+	.popular-songs .Vinyl {
+		width: 400px;
+		height: 400px;
+		left: -200px;
+	}
+	.music-hidden {
+        display: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+	.music-container {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.column-music, .column-music-two, .column-music-three {
+		display: contents;
+	}
+		
+	.column-music img, .column-music-two img, .column-music-three img {
+		width: 150px;
+		height: 150px;
+	}
+	.column-music p, .column-music-two p, .column-music-three p {
+		font-size: 12px;
+		text-align: center;
+		padding: 10px 0 0 0;
+		margin-bottom: 40px;
+	}
+	.contact-button {
+		background-color: transparent;
+		color: #B5A391;
+		border: 2px solid #B5A391;
+		padding: 10px 25px;
+		font-family: 'Jura', sans-serif;
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border-radius: 4px;
+		text-decoration: none;
+		display: inline-block;
+	}	
+	.modal-content {
+		width: 90%;
+		margin: 15% auto;
+		padding: 20px;
+	  }
+	  
+	  .modal .input-field {
+		padding: 10px;
+	  }
+	  
+	  .modal .submit-btn {
+		padding: 8px 20px;
+	  }
+	footer{
+		position: relative;
+		background-color: #060606;
+		padding: 100px 80px 0px 80px;
+		height: 481px;
+		z-index: 1;
+		display: flex;
+		background-image: none;
+		padding: 0 30px;
+	
+	}
+	footer::before{
+		content: "";
+		position: absolute;
+		top: 0;  /* Прикріплює до верху */
+    	left: 0;
+    	width: 100%;
+    	height: 100%; /* Висота фонового зображення */
+
+    	background-image: url("images/Group2.jpg");
+    	background-size: cover; /* Чітке масштабування */
+    	background-position: top center;
+    	background-repeat: no-repeat;
+		opacity: 0.4;
+		z-index: -1;
+
+	}
+	footer h2{
+		font-size: 24px;
+		padding: 40px 0 30px 0;
+		margin: 0%;
+	}
+	.footer-links, .social-links, .adress{
+		display: flex;
+		flex-direction: column;
+		font-size: 12px;
+		gap: 15px;
+	}
+	.social-links{
+		gap: 0;
+	}
+	.footer-content{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		font-size: 12px;
+		text-decoration: none;
+		gap: 15px;
+	}
+  }
+@media (max-width: 564px) {
+	.rectangle img{
+		min-width: 66px;
+		max-width: 100px;
+		max-height: 110px; 
+	}
+	.rectangle h3{
+		align-items: center;
+		font-size: 10px;
+		padding: 0 0 20px 0;
+	}
+	.rectangle{
+		max-height: 110px;
+		max-width: 110px;
+		padding: 40px; 
+		border-radius: 32px; /* Заокруглені кути */
+	}
+	.photo-music {
+		justify-content: space-around;
+    }	
+}
+@media (max-width: 464px) {
+			.menu__btn {
+				position: absolute;
+				z-index: 3; /* вище за лого */
+			}
+			.menu__box {
+				z-index: 2; 
+				position: fixed;
+				height: 35%;
+			}
+			.logo{
+				position: absolute;
+				z-index: 1;
+			}
+			.rectangle img{
+				min-width: 40px;
+				max-width: 78px;
+				max-height: 83px; 
+			}
+			.rectangle h3{
+				align-items: center;
+				font-size: 8px;
+				padding: 0 0 20px 0;
+			}
+			.rectangle{
+				max-height: 90px;
+				max-width: 90px;
+				padding: 16px; 
+				border-radius: 22px; /* Заокруглені кути */
+			}
+			.merch-element {
+				gap: 16px;
+			}
+			.next{
+				width: 50px;
+			}
+			.photo-music {
+				justify-content: space-around;
+				gap: 20px;
+			}
+			.column-music img , .column-music-two img, .column-music-three img {
+				width: 100%;
+				max-height: 120px;
+			}
+			.column-music p, .column-music-two p, .column-music-three p {
+				font-size: 10px;
+			}
+			.perfomance-photos img{
+				width: 100%;
+				max-width: 120px;
+			}	
+			.perfomance-photos h3{
+				font-size: 10px;
+				text-align: center;
+				padding: 10px 0;
+			}
+			.perfomance-photos p{
+				font-size: 8px;
+				text-align: center;
+				padding: 0 0 30px 0;
+			}
+		}
