@@ -3,7 +3,12 @@
     --text-color: #FFFFFF;
     --accent-color: #715F4C;
 }
-
+@font-face {
+    font-family: 'KyivType Titling';
+    src: url('KyivType-VariableGX/KyivTypeTitling-VarGX.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body, html {
     margin: 0;
     padding: 0;
