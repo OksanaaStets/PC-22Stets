@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка не знайдена | Schmalgauzen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="musical-background"></div>
+    <div class="vinyl-record"></div>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="error-message">
+            Вибачте, здається ви заблукали в музичному всесвіті Schmalgauzen. 
+            Сторінка, яку ви шукаєте, може бути прихована між нотами або зірвана з концерту.
+        </div>
+        <div class="error-actions">
+            <a href="/" class="btn btn-primary">На головну</a>
+            <a href="/music" class="btn btn-secondary">Музика гурту</a>
+        </div>
+    </div>
+
+    <script>
+        // Інтерактивний ефект для 404-сторінки
+        document.addEventListener('mousemove', (e) => {
+            const container = document.querySelector('.error-container');
+            const vinyl = document.querySelector('.vinyl-record');
+            
+            const moveX = (e.clientX / window.innerWidth - 0.5) * 20;
+            const moveY = (e.clientY / window.innerHeight - 0.5) * 20;
+            
+            container.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
+            vinyl.style.transform = `rotate(-15deg) translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
+</body>
+</html>
