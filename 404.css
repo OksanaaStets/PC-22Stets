@@ -35,11 +35,6 @@ body, html {
 
 .stiker-container img {
     position: absolute;
-    width: 500px; /* Встановлюємо розмір стікерів */
-    height: auto;
-}
-.stiker-five{
-    position: absolute;
     width: 500px;
     height: auto;
 }
