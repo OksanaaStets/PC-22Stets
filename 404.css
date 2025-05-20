@@ -35,7 +35,7 @@ body, html {
 
 .stiker-container img {
     position: absolute;
-    width: 250px; /* Встановлюємо розмір стікерів */
+    width: 500px; /* Встановлюємо розмір стікерів */
     height: auto;
 }
 .stiker-five{
@@ -46,40 +46,40 @@ body, html {
 
 /* Позиціонування кожного стікера окремо */
 .stiker-container img:nth-child(1) {
-    top: 10%;
-    left: 10%;
+    top: -2%;
+    left: -4%;
     transform: rotate(-15deg);
 }
 
 .stiker-container img:nth-child(2) {
-    top: 20%;
-    right: 15%;
+    top: 8%;
+    right: -1%;
     transform: rotate(10deg);
 }
 
 .stiker-container img:nth-child(3) {
-    bottom: 30%;
+    bottom: 50%;
     left: 20%;
     transform: rotate(5deg);
 }
 
 .stiker-container img:nth-child(4) {
-    bottom: 20%;
-    right: 20%;
+    bottom: -1%;
+    right: -3%;
     transform: rotate(-8deg);
 }
 
 .stiker-container img:nth-child(5) {
-    top: 50%;
-    left: 50%;
+    top: 69%;
+    left: 20%;
     transform: translate(-50%, -50%) rotate(12deg);
     --rotation: 12;
 }
 
 .stiker-container img:nth-child(6) {
-    top: 70%;
-    left: 25%;
-    transform: rotate(-20deg);
+    top: 61%;
+    left: 26%;
+    transform: rotate(23deg);
     --rotation: 12;
 }
 
