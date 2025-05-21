@@ -1,0 +1,22 @@
+name: Update Sitemap
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Виконувати щонеділі о 00:00
+  push:
+    branches: [ main ]  
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update sitemap lastmod date
+        run: |
+          CURRENT_DATE=$(date +"%Y-%m-%d")
+          sed -i "s/<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}<\/lastmod>/<lastmod>$CURRENT_DATE<\/lastmod>/g" sitemap.xml
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sitemap.xml
+          git commit -m "Auto-update sitemap.xml" || echo "No changes to commit"
+          git push
