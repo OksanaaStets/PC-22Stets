@@ -114,7 +114,6 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: rgba(6, 6, 6, 0.7); /* Напівпрозорий фон */
     padding: 15px;
     border-radius: 10px;
 }
@@ -179,5 +178,18 @@ body, html {
     top: 15%;
     right: -1%;
     transform: rotate(10deg);
+}
+}
+@media (max-width: 500px) {
+    .error-code {
+        font-size: 4rem;
+    }
+    
+    .error-message {
+        font-size: 1rem;
+    }
+    
+    .stiker-container img {
+        width: 300px;
 }
 }
