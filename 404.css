@@ -192,4 +192,24 @@ body, html {
     .stiker-container img {
         width: 300px;
 }
+.stiker-container img:nth-child(2) {
+        top: 13%;
+        right: 7%;
+        transform: rotate(10deg);
+    }
+    .stiker-container img:nth-child(3) {
+    bottom: 38%;
+    left: 32%;
+    transform: rotate(-161deg);
+}
+.stiker-container img:nth-child(4) {
+        bottom: -4%;
+        right: 26%;
+        transform: rotate(-8deg);
+    }
+.stiker-container img:nth-child(5) {
+    top: 66%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(112deg);
+}
 }
