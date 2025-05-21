@@ -1,22 +1,24 @@
 // sw.js - Service Worker для кешування ресурсів
 
-const CACHE_NAME = 'schmalgauzen-cache-v1';
+const CACHE_NAME = 'schmalgauzen-cache-v2'; // ЗМІНІТЬ ВЕРСІЮ КЕШУ! Це дуже важливо, щоб Service Worker оновився.
 const URLS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/images/Logo.png',
-  '/images/Vlad.jpg',
-  '/images/Roman.jpg',
-  '/images/Matiukhin.jpg',
-  '/images/Kiril.jpg',
-  '/images/George.jpg',
-  '/images/Jenia.jpg',
-  '/images/Silence.jpg',
-  '/images/Opera.jpg',
-  '/images/Avgusto.jpg',
-  '/images/Vill.jpg',
-  
+  '/PC-22Stets/', // Це кореневий URL вашого проекту на GitHub Pages
+  '/PC-22Stets/index.html', // Шлях до вашого основного HTML-файлу
+  '/PC-22Stets/styles.css', // Шлях до вашого CSS-файлу
+  '/PC-22Stets/images/Logo.png',
+  '/PC-22Stets/images/Vlad.jpg',
+  '/PC-22Stets/images/Roman.jpg',
+  '/PC-22Stets/images/Matiukhin.jpg',
+  '/PC-22Stets/images/Kiril.jpg',
+  '/PC-22Stets/images/George.jpg',
+  '/PC-22Stets/images/Jenia.jpg',
+  '/PC-22Stets/images/Silence.jpg',
+  '/PC-22Stets/images/Opera.jpg',
+  '/PC-22Stets/images/Avgusto.jpg',
+  '/PC-22Stets/images/Vill.jpg',
+  '/PC-22Stets/favicon.ico', 
+  '/PC-22Stets/site.webmanifest', 
+  '/PC-22Stets/main.js', 
 ];
 
 // Встановлення Service Worker і кешування ресурсів
@@ -25,9 +27,18 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Service Worker: Кешування файлів');
-        return cache.addAll(URLS_TO_CACHE);
+        // Додаємо console.error для кращої діагностики помилки
+        return cache.addAll(URLS_TO_CACHE).catch(error => {
+          console.error('Service Worker: Помилка при кешуванні одного з файлів:', error);
+          // Ви можете видалити проблемний URL зі списку URLS_TO_CACHE, якщо він не є критичним
+          // або виправити сам URL
+          throw error; // Повторно викидаємо помилку, щоб install не вдався
+        });
       })
       .then(() => self.skipWaiting())
+      .catch(error => {
+        console.error('Service Worker: Помилка під час встановлення:', error);
+      })
   );
 });
 
@@ -38,7 +49,7 @@ self.addEventListener('activate', event => {
       return Promise.all(
         cacheNames.map(cache => {
           if (cache !== CACHE_NAME) {
-            console.log('Service Worker: Очищення старого кешу');
+            console.log('Service Worker: Очищення старого кешу:', cache);
             return caches.delete(cache);
           }
         })
@@ -52,47 +63,40 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Повернення кешованого ресурсу, якщо він є
         if (response) {
           return response;
         }
-        
-        // Копіювання запиту, оскільки запит може бути використаний тільки один раз
+
         const fetchRequest = event.request.clone();
-        
-        // Спроба отримати ресурс з мережі
+
         return fetch(fetchRequest).then(response => {
-          // Перевірка, чи отримали валідну відповідь
           if(!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
-          
-          // Копіювання відповіді для кешування
+
           const responseToCache = response.clone();
-          
-          // Відкриття кешу і збереження нової відповіді
+
           caches.open(CACHE_NAME)
             .then(cache => {
-              // Кешування тільки статичних ресурсів (не API запити)
-              if (event.request.url.indexOf('http') === 0) {
-                cache.put(event.request, responseToCache);
+              if (event.request.url.startsWith('http')) { // Використовуйте startsWith для більшої точності
+                 cache.put(event.request, responseToCache);
               }
             });
-            
+
           return response;
         });
       })
       .catch(() => {
         // Якщо мережа недоступна і кеш не має ресурсу, можна повернути fallback
-        if (event.request.url.indexOf('.html') > -1 || 
-            event.request.url === '/' || 
+        // Перевірте, чи існують ці файли на вашому сервері
+        if (event.request.url.includes('.html') ||
+            event.request.url === '/PC-22Stets/' || // Для кореневого URL вашого сайту
             event.request.mode === 'navigate') {
-          return caches.match('/offline.html');
+          return caches.match('/PC-22Stets/offline.html'); // Шлях до вашої офлайн-сторінки
         }
-        
-        // Для зображень можна повернути заглушку
+
         if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg)$/)) {
-          return caches.match('/images/placeholder.png');
+          return caches.match('/PC-22Stets/images/placeholder.png'); // Шлях до вашої заглушки зображень
         }
       })
   );
