@@ -652,7 +652,6 @@ nav a {
   color: #000;
 }
 
-/* Video */
 video {
   overflow: clip;
   width: 637px;
@@ -662,7 +661,6 @@ video {
   right: 0%;
 }
 
-/* Footer */
 footer {
   background-color: #050505;
   padding: 0 var(--padding-page) 0px var(--padding-page);
@@ -675,7 +673,7 @@ footer {
   background-position: center right;
 }
 
-footer a, footer p {
+footer a, footer p , .contact-link{
   font-family: var(--font-deco);
   font-weight: 400;
   color: var(--color-accent);
@@ -711,7 +709,6 @@ footer h2 {
   flex-direction: column;
 }
 
-/* RESPONSIVE */
 @media (max-width: 1600px) {
   .tickets-photo-main {
     height: 455px;
