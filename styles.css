@@ -673,7 +673,7 @@ footer {
   background-position: center right;
 }
 
-footer a, footer p , .contact-link{
+footer a, .contact-link{
   font-family: var(--font-deco);
   font-weight: 400;
   color: var(--color-accent);
