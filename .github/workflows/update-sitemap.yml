@@ -19,7 +19,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull --rebase
+          git stash --include-untracked                # Зберегти незакомічені зміни
+          git pull --rebase                            # Витягнути останні зміни з main
+          git stash pop                                # Відновити збережені зміни
           git add sitemap.xml
           git commit -m "Auto-update sitemap.xml" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
+        
