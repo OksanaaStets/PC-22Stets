@@ -1,28 +1,50 @@
+
 name: Update Sitemap
 on:
   schedule:
     - cron: '0 0 * * 0'   # Виконувати щонеділі о 00:00
   push:
-    branches: [ main ]  
+    branches: [ main ]
+    paths-ignore:
+      - 'sitemap.xml'     # Ігнорувати зміни в sitemap.xml, щоб уникнути циклу
+
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Явний дозвіл на запис у репозиторій
+      contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          
+      - name: Check if sitemap needs update
+        id: check
+        run: |
+          CURRENT_DATE=$(date +"%Y-%m-%d")
+          if grep -q "<lastmod>$CURRENT_DATE</lastmod>" sitemap.xml; then
+            echo "needs_update=false" >> $GITHUB_OUTPUT
+            echo "Sitemap already up to date"
+          else
+            echo "needs_update=true" >> $GITHUB_OUTPUT
+            echo "Sitemap needs update"
+          fi
+          
       - name: Update sitemap lastmod date
+        if: steps.check.outputs.needs_update == 'true'
         run: |
           CURRENT_DATE=$(date +"%Y-%m-%d")
           sed -i "s|<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}<\/lastmod>|<lastmod>$CURRENT_DATE<\/lastmod>|g" sitemap.xml
+          
       - name: Commit and push changes
+        if: steps.check.outputs.needs_update == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git stash --include-untracked                # Зберегти незакомічені зміни
-          git pull --rebase                            # Витягнути останні зміни з main
-          git stash pop                                # Відновити збережені зміни
           git add sitemap.xml
-          git commit -m "Auto-update sitemap.xml" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
-        
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update sitemap.xml [skip ci]"
+            git push
+          fi
