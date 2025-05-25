@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://oksanaastets.github.io/PC-22Stets/sitemap.xml
-
-# Заборона індексації певних URL
-Disallow: /admin/
-Disallow: /*.php$
