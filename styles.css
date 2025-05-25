@@ -1127,346 +1127,409 @@ footer h2 {
     font-size: var(--font-md);
     padding-bottom: 20px;
   }
-  /* неперероблено */
-	.Performances {
-		/* padding: 0 30px; */
-		height: auto;
-        min-height: 1029px;
-		overflow: hidden;
-		z-index: 1;
-		padding-bottom: 10px;
-    }
-	.Performances::before {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-size: 180% 28%;
-		background-repeat: repeat-y;
-		z-index: -1;
-	}  	
-	.perfomance-photos{
-	padding: 0;
+  .Performances {
+    height: auto;
+    min-height: 1029px;
+    overflow: hidden;
+    z-index: 1;
+    padding-bottom: 10px;
+}
+
+.Performances::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 180% 28%;
+    background-repeat: repeat-y;
+    z-index: -1;
+}
+
+.perfomance-photos {
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-	height: auto;
-	}
-	.perfomance-photos img{
-		width: 100%;
-		max-width: 200px;
-	}
-	.Performances h2{
-		margin: 0%;
-		padding: 40px 123px 30px 123px;
-		font-size: 24px;
-		text-align: center;
-	}	
-	.perfomance-photos h3{
-		font-size: 12px;
-		text-align: center;
-		padding: 10px 0;
-	}
-	.perfomance-photos p{
-		font-size: 11px;
-		text-align: center;
-		padding: 0 0 30px 0;
-	}
-	.merch, .popular-songs{
-		padding: 0 30px;
-		}
-	.merch h2{
-		font-size: 24px;
-		padding: 40px 0 30px 0;
-		margin: 0%;
-	}
-	.merch-container .merch-element-none {
-        display: none;
-    }
-	.merch-container {
-		display: flex;
-		flex-direction: column;
-	}
-	.merch-element {
-		display: block;
-		display: flex;
-		flex-direction: row;
-		gap: 20px;
-	}
-	.rectangle img{
-		min-width: 66px;
-		max-width: 130px;
-		max-height: 140px; 
-	}
-	.rectangle h3{
-		align-items: center;
-		font-size: 12px;
-		padding: 0 0 20px 0;
-	}
-	.rectangle{
-		max-height: 122px;
-		max-width: 122px;;
-		border-radius: 32px; /* Заокруглені кути */
-	}
-	.next{
-		display: block;
-  		margin: 0 auto; /* по центру + відступ зверху */
-		width: 70px;
-		height: auto;
-		padding-bottom: 30px;
-	}
-	.tickets{
-		padding: 0 30px;
-		min-height: 500px;
-	}
-	.tickets-photo-main{
-		height: 330px;
-		justify-content: center;
-		align-items: center;
-		
-	}
-	.tickets-container {
-		flex-direction: row; 
-		justify-content:center;
-		padding: 0;
-		gap: 20px; 
-		z-index: 1;
-		padding-bottom: 30px;
-	}
-	.tickets-photo {
-		position: absolute;
-		top: 10%;
-		width: 150px;
-		height: auto;
-	}
-	.tickets h2 {
-		font-size: 24px;
-		padding: 40px 0 30px 0;
-		margin: 0%;
-	}
-	.main-tickets {
-		font-size: 19px;
-	}
-	.tickets-p, .tickets-price{
-		font-size: 18px;
-		top: 57%;
-	}
-	.tickets-price{
-		top: 66%;
-	}
-	.buy-btn {
-		font-size: 12px;
-		border-radius: 10px;
-   	 	padding: 6px 15px;
-		top: 77%;
-	}
-	.tickets-element p:nth-of-type(1), .tickets-element p:nth-of-type(2){
-		font-size: 12px;
-	}
-	.photo-music {
-        display: flex;
-		flex-wrap: wrap;
-        gap: 20px;
-        justify-items: center;
-		justify-content: space-around;
-		min-height: 300px;
-    }
-	.popular-songs h2{
-		font-size: 24px;
-		padding: 40px 0 30px 0;
-		margin: 0%;
-	}
-	.popular-songs .Vinyl {
-		width: 400px;
-		height: 400px;
-		left: -200px;
-	}
-	.music-hidden {
-        display: none;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-    }
-	.music-container {
-		display: flex;
-		justify-content: center;
-	}
-	
-	.column-music, .column-music-two, .column-music-three {
-		display: contents;
-	}
-		
-	.column-music img, .column-music-two img, .column-music-three img {
-		width: 150px;
-		height: 150px;
-	}
-	.column-music p, .column-music-two p, .column-music-three p {
-		font-size: 12px;
-		text-align: center;
-		padding: 10px 0 0 0;
-		margin-bottom: 40px;
-	}
-	.contact-button {
-		background-color: transparent;
-		color: #B5A391;
-		border: 2px solid #B5A391;
-		padding: 10px 25px;
-		font-family: 'Jura', sans-serif;
-		font-size: 12px;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		border-radius: 4px;
-		text-decoration: none;
-		display: inline-block;
-	}	
-	.modal-content {
-		width: 90%;
-		margin: 15% auto;
-		padding: 20px;
-	  }
-	  
-	  .modal .input-field {
-		padding: 10px;
-	  }
-	  
-	  .modal .submit-btn {
-		padding: 8px 20px;
-	  }
-	footer{
-		position: relative;
-		background-color: #060606;
-		padding: 100px 80px 0px 80px;
-		height: 481px;
-		z-index: 1;
-		display: flex;
-		background-image: none;
-		padding: 0 30px;
-	
-	}
-	footer::before{
-		content: "";
-		position: absolute;
-		top: 0;  /* Прикріплює до верху */
-    	left: 0;
-    	width: 100%;
-    	height: 100%; /* Висота фонового зображення */
-
-    	background-image: url("images/Group-photo2.JPG");
-    	background-size: cover; /* Чітке масштабування */
-    	background-position: top center;
-    	background-repeat: no-repeat;
-		opacity: 0.4;
-		z-index: -1;
-
-	}
-	footer h2{
-		font-size: 24px;
-		padding: 40px 0 30px 0;
-		margin: 0%;
-	}
-	.footer-links, .social-links, .adress{
-		display: flex;
-		flex-direction: column;
-		font-size: 12px;
-		gap: 15px;
-	}
-	.social-links{
-		gap: 0;
-	}
-	.footer-content{
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		font-size: 12px;
-		text-decoration: none;
-		gap: 15px;
-	}
-  }
-@media (max-width: 564px) {
-	.rectangle img{
-		min-width: 66px;
-		max-width: 100px;
-		max-height: 110px; 
-	}
-	.rectangle h3{
-		align-items: center;
-		font-size: 10px;
-		padding: 0 0 20px 0;
-	}
-	.rectangle{
-		max-height: 110px;
-		max-width: 110px;
-		padding: 40px; 
-		border-radius: 32px; /* Заокруглені кути */
-	}
-	.photo-music {
-		justify-content: space-around;
-    }	
+    height: auto;
 }
+
+.perfomance-photos img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.Performances h2 {
+    margin: 0;
+    padding: 40px 123px 30px 123px;
+    font-size: var(--font-lg);
+    text-align: center;
+}
+
+.perfomance-photos h3 {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.perfomance-photos p {
+    font-size: 11px;
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+
+.merch, .popular-songs {
+    padding: 0 30px;
+}
+
+.merch h2 {
+    font-size: var(--font-lg);
+    padding: 40px 0 30px 0;
+    margin: 0;
+}
+
+.merch-container .merch-element-none {
+    display: none;
+}
+
+.merch-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.merch-element {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.rectangle img {
+    min-width: 66px;
+    max-width: 130px;
+    max-height: 140px;
+}
+
+.rectangle h3 {
+    align-items: center;
+    font-size: 12px;
+    padding: 0 0 20px 0;
+}
+
+.rectangle {
+    max-height: 122px;
+    max-width: 122px;
+    border-radius: 32px;
+}
+
+.next {
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.tickets {
+    padding: 0 30px;
+    min-height: 500px;
+}
+
+.tickets-photo-main {
+    height: 330px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tickets-container {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    gap: 20px;
+    z-index: 1;
+    padding-bottom: 30px;
+}
+
+.tickets-photo {
+    position: absolute;
+    top: 10%;
+    width: 150px;
+    height: auto;
+}
+
+.tickets h2 {
+    font-size: var(--font-lg);
+    padding: 40px 0 30px 0;
+    margin: 0;
+}
+
+.main-tickets {
+    font-size: 19px;
+}
+
+.tickets-p, .tickets-price {
+    font-size: 18px;
+    top: 57%;
+}
+
+.tickets-price {
+    top: 66%;
+}
+
+.buy-btn {
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 6px 15px;
+    top: 77%;
+    transition: var(--transition-default);
+}
+
+.tickets-element p:nth-of-type(1), 
+.tickets-element p:nth-of-type(2) {
+    font-size: 12px;
+}
+
+.photo-music {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-items: center;
+    justify-content: space-around;
+    min-height: 300px;
+}
+
+.popular-songs h2 {
+    font-size: var(--font-lg);
+    padding: 40px 0 30px 0;
+    margin: 0;
+}
+
+.popular-songs .Vinyl {
+    width: 400px;
+    height: 400px;
+    left: -200px;
+}
+
+.music-hidden {
+    display: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.music-container {
+    display: flex;
+    justify-content: center;
+}
+
+.column-music, 
+.column-music-two, 
+.column-music-three {
+    display: contents;
+}
+
+.column-music img, 
+.column-music-two img, 
+.column-music-three img {
+    width: 150px;
+    height: 150px;
+}
+
+.column-music p, 
+.column-music-two p, 
+.column-music-three p {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    margin-bottom: 40px;
+}
+
+.contact-button {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    padding: 10px 25px;
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition-default);
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.modal-content {
+    width: 90%;
+    margin: 15% auto;
+    padding: 20px;
+}
+
+.modal .input-field {
+    padding: 10px;
+}
+
+.modal .submit-btn {
+    padding: 8px 20px;
+}
+
+footer {
+    position: relative;
+    background-color: var(--color-dark);
+    padding: 0 30px;
+    height: 481px;
+    z-index: 1;
+    display: flex;
+    background-image: none;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Group-photo2.JPG");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+footer h2 {
+    font-size: var(--font-lg);
+    padding: 40px 0 30px 0;
+    margin: 0;
+}
+
+.footer-links, 
+.social-links, 
+.adress {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 15px;
+}
+
+.social-links {
+    gap: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 12px;
+    text-decoration: none;
+    gap: 15px;
+}
+
+@media (max-width: 564px) {
+    .rectangle img {
+        min-width: 66px;
+        max-width: 100px;
+        max-height: 110px;
+    }
+    
+    .rectangle h3 {
+        align-items: center;
+        font-size: 10px;
+        padding: 0 0 20px 0;
+    }
+    
+    .rectangle {
+        max-height: 110px;
+        max-width: 110px;
+        padding: 40px;
+        border-radius: 32px;
+    }
+    
+    .photo-music {
+        justify-content: space-around;
+    }
+}
+
 @media (max-width: 464px) {
-			.menu__btn {
-				position: absolute;
-				z-index: 3; /* вище за лого */
-			}
-			.menu__box {
-				z-index: 2; 
-				position: fixed;
-				height: 35%;
-			}
-			.logo{
-				position: absolute;
-				z-index: 1;
-			}
-			.rectangle img{
-				min-width: 40px;
-				max-width: 78px;
-				max-height: 83px; 
-			}
-			.rectangle h3{
-				align-items: center;
-				font-size: 8px;
-				padding: 0 0 20px 0;
-			}
-			.rectangle{
-				max-height: 90px;
-				max-width: 90px;
-				padding: 16px; 
-				border-radius: 22px; /* Заокруглені кути */
-			}
-			.merch-element {
-				gap: 16px;
-			}
-			.next{
-				width: 50px;
-			}
-			.photo-music {
-				justify-content: space-around;
-				gap: 20px;
-			}
-			.column-music img , .column-music-two img, .column-music-three img {
-				width: 100%;
-				max-height: 120px;
-			}
-			.column-music p, .column-music-two p, .column-music-three p {
-				font-size: 10px;
-			}
-			.perfomance-photos img{
-				width: 100%;
-				max-width: 120px;
-			}	
-			.perfomance-photos h3{
-				font-size: 10px;
-				text-align: center;
-				padding: 10px 0;
-			}
-			.perfomance-photos p{
-				font-size: 8px;
-				text-align: center;
-				padding: 0 0 30px 0;
-			}
-		}
+    .menu__btn {
+        position: absolute;
+        z-index: 3;
+    }
+    
+    .menu__box {
+        z-index: 2;
+        position: fixed;
+        height: 35%;
+    }
+    
+    .logo {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .rectangle img {
+        min-width: 40px;
+        max-width: 78px;
+        max-height: 83px;
+    }
+    
+    .rectangle h3 {
+        align-items: center;
+        font-size: 8px;
+        padding: 0 0 20px 0;
+    }
+    
+    .rectangle {
+        max-height: 90px;
+        max-width: 90px;
+        padding: 16px;
+        border-radius: 22px;
+    }
+    
+    .merch-element {
+        gap: 16px;
+    }
+    
+    .next {
+        width: 50px;
+    }
+    
+    .photo-music {
+        justify-content: space-around;
+        gap: 20px;
+    }
+    
+    .column-music img, 
+    .column-music-two img, 
+    .column-music-three img {
+        width: 100%;
+        max-height: 120px;
+    }
+    
+    .column-music p, 
+    .column-music-two p, 
+    .column-music-three p {
+        font-size: 10px;
+    }
+    
+    .perfomance-photos img {
+        width: 100%;
+        max-width: 120px;
+    }
+    
+    .perfomance-photos h3 {
+        font-size: 10px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .perfomance-photos p {
+        font-size: 8px;
+        text-align: center;
+        padding: 0 0 30px 0;
+    }
+  }
+}
